@@ -1,0 +1,16 @@
+.DS_Store
+
+build/
+
+cmake-build-*
+.idea/
+
+.vscode/
+
+.vs/
+**/out/
+CMakeSettings.json
+
+docs/img/*
+docs/theme/*
+
