@@ -12,6 +12,7 @@ static void setUpPanControl (juce::Slider & slider)
     slider.updateText ();
     slider.setDoubleClickReturnValue (true, 0.0);
     slider.setTextBoxIsEditable (false);
+    slider.setTitle ("Pan");
 }
 
 static void setUpGainControl (juce::Slider & slider)
@@ -20,6 +21,7 @@ static void setUpGainControl (juce::Slider & slider)
     slider.setTextValueSuffix ("dB");
     slider.setDoubleClickReturnValue (true, 0.0);
     slider.setTextBoxIsEditable (false);
+    slider.setTitle ("Gain");
 }
 
 static void setUpLevelControl (juce::Slider & slider)
@@ -28,17 +30,21 @@ static void setUpLevelControl (juce::Slider & slider)
     slider.setTextValueSuffix ("dB");
     slider.setDoubleClickReturnValue (true, 0.0);
     slider.setTextBoxIsEditable (false);
+    slider.setTitle ("Level");
 }
 
 ChannelStrip::ChannelStrip ()
 {
     muteButton.setClickingTogglesState (true);
+    muteButton.setTitle ("Mute");
     addAndMakeVisible (muteButton);
 
     soloButton.setClickingTogglesState (true);
+    soloButton.setTitle ("Solo");
     addAndMakeVisible (soloButton);
 
     phantomPowerButton.setClickingTogglesState (true);
+    phantomPowerButton.setTitle ("48V");
     addAndMakeVisible (phantomPowerButton);
 
     setUpPanControl (panRotary);

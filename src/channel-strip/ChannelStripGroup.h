@@ -11,6 +11,8 @@ public:
     void resized () override;
 
 private:
+    void updateTitles ();
+
     std::array<ChannelStrip, 4> channelStrips;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ChannelStripGroup)

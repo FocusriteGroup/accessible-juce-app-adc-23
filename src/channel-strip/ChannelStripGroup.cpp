@@ -1,9 +1,20 @@
 #include "ChannelStripGroup.h"
 
+void ChannelStripGroup::updateTitles ()
+{
+    for (size_t index {0}; index < channelStrips.size (); ++index)
+    {
+        const juce::String channelNumber {index + 1};
+        channelStrips [index].setTitle ("Channel " + channelNumber);
+    }
+}
+
 ChannelStripGroup::ChannelStripGroup ()
 {
     for (auto & channelStrip : channelStrips)
         addAndMakeVisible (channelStrip);
+
+    updateTitles ();
 }
 
 void ChannelStripGroup::resized ()
