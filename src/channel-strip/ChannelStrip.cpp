@@ -1,4 +1,5 @@
 #include "ChannelStrip.h"
+#include <utilities/ExplicitFocusOrder.h>
 
 static void setUpPanControl (juce::Slider & slider)
 {
@@ -60,6 +61,13 @@ ChannelStrip::ChannelStrip ()
 
     setUpLevelControl (levelSlider);
     addAndMakeVisible (levelSlider);
+
+    ExplicitFocusOrder::startingWith (phantomPowerButton)
+        .then (gainRotary)
+        .then (panRotary)
+        .then (levelSlider)
+        .then (muteButton)
+        .then (soloButton);
 }
 
 static auto createButtonGridItem (juce::TextButton & button)
