@@ -35,6 +35,8 @@ static void setUpLevelControl (juce::Slider & slider)
 
 ChannelStrip::ChannelStrip ()
 {
+    setFocusContainerType (FocusContainerType::focusContainer);
+
     muteButton.setClickingTogglesState (true);
     muteButton.setTitle ("Mute");
     addAndMakeVisible (muteButton);
