@@ -13,6 +13,7 @@ static void setUpPanControl (juce::Slider & slider)
     slider.setDoubleClickReturnValue (true, 0.0);
     slider.setTextBoxIsEditable (false);
     slider.setTitle ("Pan");
+    slider.setWantsKeyboardFocus (true);
 }
 
 static void setUpGainControl (juce::Slider & slider)
@@ -22,6 +23,7 @@ static void setUpGainControl (juce::Slider & slider)
     slider.setDoubleClickReturnValue (true, 0.0);
     slider.setTextBoxIsEditable (false);
     slider.setTitle ("Gain");
+    slider.setWantsKeyboardFocus (true);
 }
 
 static void setUpLevelControl (juce::Slider & slider)
@@ -31,6 +33,7 @@ static void setUpLevelControl (juce::Slider & slider)
     slider.setDoubleClickReturnValue (true, 0.0);
     slider.setTextBoxIsEditable (false);
     slider.setTitle ("Level");
+    slider.setWantsKeyboardFocus (true);
 }
 
 ChannelStrip::ChannelStrip ()
