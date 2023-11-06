@@ -52,6 +52,8 @@ public:
         centreWithSize (getWidth (), getHeight ());
 
         Window::setVisible (true);
+
+        setWantsKeyboardFocus (false);
     }
 
     void closeButtonPressed () override
