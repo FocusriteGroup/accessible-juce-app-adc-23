@@ -9,3 +9,17 @@ std::unique_ptr<juce::AccessibilityHandler> Button::createAccessibilityHandler (
                                                                            ? juce::AccessibilityRole::toggleButton
                                                                            : juce::AccessibilityRole::button);
 }
+
+bool Button::keyPressed (const juce::KeyPress & key)
+{
+    if (! isEnabled ())
+        return false;
+
+    if (key == juce::KeyPress::returnKey || key == juce::KeyPress::spaceKey)
+    {
+        triggerClick ();
+        return true;
+    }
+
+    return false;
+}

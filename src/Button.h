@@ -9,6 +9,7 @@ public:
 
 private:
     std::unique_ptr<juce::AccessibilityHandler> createAccessibilityHandler () override;
+    bool keyPressed (const juce::KeyPress & key) override;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Button)
 };
